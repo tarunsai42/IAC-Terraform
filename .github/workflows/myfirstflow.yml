@@ -26,5 +26,23 @@ jobs:
     - name: Print Runner IP Address
       run: curl -sL https://ipconfig.io
       shell: bash
-      
+    - name: Terraform fmt
+      id: fmt
+      run: terraform fmt -recursive
+
+    - name: Terraform Init
+      id: init
+      run: terraform init -no-color
+
+    - name: Terraform Validate
+      id: validate
+      run: terraform validate -no-color
+
+    - name: Terraform Plan
+      id: plan
+      run: terraform plan -no-color
+
+    - name: Terraform Apply
+      id: apply
+      run: terraform apply -auto-approve -no-color  
   
