@@ -5,7 +5,7 @@ on:
     branches: [testing]
     types: [closed]
   push:
-    branches: [master]
+    branches: [main]
 env:
   ARM_CLIENT_ID: ${{secrets.ARM_CLIENT_ID}}
   ARM_CLIENT_SECRET: ${{secrets.ARM_CLIENT_SECRET}}
