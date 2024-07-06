@@ -32,23 +32,29 @@ jobs:
     - name: Print Runner IP Address
       run: curl -sL https://ipconfig.io
       shell: bash
+    
     - name: Terraform fmt
       id: fmt
       run: terraform fmt -recursive
+      working-directory: ./terraform
 
     - name: Terraform Init
       id: init
       run: terraform init -no-color
+      working-directory: ./terraform
 
     - name: Terraform Validate
       id: validate
       run: terraform validate -no-color
+      working-directory: ./terraform
 
     - name: Terraform Plan
       id: plan
       run: terraform plan -no-color
+      working-directory: ./terraform
 
     - name: Terraform Apply
       id: apply
-      run: terraform apply -auto-approve -no-color  
+      run: terraform apply -auto-approve -no-color
+      working-directory: ./terraform
   
