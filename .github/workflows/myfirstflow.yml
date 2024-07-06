@@ -20,6 +20,12 @@ jobs:
       run:
         shell: bash 
     steps:
+    - name: Check out the repository
+      uses: actions/checkout@v3
+    - name: Terraform
+      uses: hashicorp/setup-terraform@v3
+      with:
+       cli_config_credentials_token: ${{ secrets.TF_TOKEN }}  
     - name: print Runner Hostname
       run: hostname 
       shell: bash 
