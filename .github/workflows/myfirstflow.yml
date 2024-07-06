@@ -36,25 +36,25 @@ jobs:
     - name: Terraform fmt
       id: fmt
       run: terraform fmt -recursive
-      working-directory: ./path
+      working-directory: .\path
 
     - name: Terraform Init
       id: init
       run: terraform init -no-color
-      working-directory: ./path
+      working-directory: .\path
 
     - name: Terraform Validate
       id: validate
       run: terraform validate -no-color
-      working-directory: ./path
+      working-directory: .\path
 
     - name: Terraform Plan
       id: plan
       run: terraform plan -no-color
-      working-directory: ./path
+      working-directory: .\path
 
     - name: Terraform Apply
       id: apply
       run: terraform apply -auto-approve -no-color
-      working-directory: ./path
+      working-directory: .\path
   
