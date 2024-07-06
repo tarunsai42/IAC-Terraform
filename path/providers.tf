@@ -6,7 +6,7 @@ terraform {
     hostname     = "app.terraform.io"
     organization = "Terraform-IACS"
     workspaces {
-      name = "IAC-Terraform"
+      name = "IACS"
     }
   }
 }
