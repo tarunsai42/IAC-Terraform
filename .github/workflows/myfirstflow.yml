@@ -2,7 +2,7 @@
 name: workflow for running my first github actions
 on:
   pull_request:
-    branches: [development]
+    branches: [testing]
     types: [closed]
   push:
     branches: [master]
