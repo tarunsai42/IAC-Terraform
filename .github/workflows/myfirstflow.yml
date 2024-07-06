@@ -67,4 +67,11 @@ jobs:
       id: apply
       run: terraform apply -auto-approve -no-color
       working-directory: ./path
-  
+    
+    - name: Render terraform docs and push changes back to PR
+      uses: terraform-docs/gh-actions@main
+      with:
+        working-dir: ./path
+        output-file: README.md
+        output-method: inject
+        git-push: "true"
