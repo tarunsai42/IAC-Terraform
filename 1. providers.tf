@@ -1,7 +1,6 @@
 terraform {
-  required_version = "~> 0.12.0"
   required_providers {
-    azurerm = "~> 2.11.0"
+    azurerm = "=3.100.0"
   }
   backend "remote" {
     hostname     = "app.terraform.io"
